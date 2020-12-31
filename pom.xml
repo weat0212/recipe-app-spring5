@@ -73,6 +73,7 @@
                     <includes>
                         <include>**/*IT.java</include>
                     </includes>
+                    <classesDirectory>${project.build.directory}/${artifactId}.jar.original</classesDirectory>
                     <additionalClasspathElements>
                         <additionalClasspathElement>${basedir}/target/classes</additionalClasspathElement>
                     </additionalClasspathElements>
