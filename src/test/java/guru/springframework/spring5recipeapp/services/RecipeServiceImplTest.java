@@ -1,11 +1,14 @@
 package guru.springframework.spring5recipeapp.services;
 
+import guru.springframework.spring5recipeapp.converters.RecipeCommandToRecipe;
+import guru.springframework.spring5recipeapp.converters.RecipeToRecipeCommand;
 import guru.springframework.spring5recipeapp.domain.Recipe;
 import guru.springframework.spring5recipeapp.repositories.RecipeRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -19,6 +22,8 @@ import static org.mockito.Mockito.*;
  * @author I-Chung, Wang
  * @date 2020/12/24 下午 01:24
  */
+
+@ExtendWith(MockitoExtension.class)
 class RecipeServiceImplTest {
 
     RecipeServiceImpl recipeService;
@@ -26,11 +31,18 @@ class RecipeServiceImplTest {
     @Mock
     RecipeRepository recipeRepository;
 
+    @Mock
+    RecipeToRecipeCommand recipeToRecipeCommand;
+
+    @Mock
+    RecipeCommandToRecipe recipeCommandToRecipe;
+
     @BeforeEach
     public void setUp() throws Exception {
-        MockitoAnnotations.initMocks(this);
+//        MockitoAnnotations.initMocks(this);
+//        JUnit5 Replace with @ExtendWith(MockitoExtension.class)
 
-        recipeService = new RecipeServiceImpl(recipeRepository);
+        recipeService = new RecipeServiceImpl(recipeRepository, recipeCommandToRecipe, recipeToRecipeCommand);
     }
 
     @Test
