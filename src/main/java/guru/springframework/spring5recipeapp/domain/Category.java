@@ -1,7 +1,8 @@
 package guru.springframework.spring5recipeapp.domain;
 
-import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -13,7 +14,8 @@ import java.util.Set;
  * @date 2020/12/8 下午 09:32
  */
 
-@Data
+@Getter
+@Setter
 @EqualsAndHashCode(exclude = {"recipes"})
 @Entity
 public class Category {

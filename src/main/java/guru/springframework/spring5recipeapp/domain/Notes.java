@@ -1,7 +1,8 @@
 package guru.springframework.spring5recipeapp.domain;
 
-import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -12,7 +13,8 @@ import javax.persistence.*;
  * @date 2020/12/7 下午 07:51
  */
 
-@Data
+@Getter
+@Setter
 @EqualsAndHashCode(exclude = {"recipe"})
 @Entity
 public class Notes {

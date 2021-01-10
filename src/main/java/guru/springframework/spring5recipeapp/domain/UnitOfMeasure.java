@@ -1,6 +1,7 @@
 package guru.springframework.spring5recipeapp.domain;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +14,8 @@ import javax.persistence.Id;
  * @package guru.springframework.spring5recipeapp.domain
  * @date 2020/12/8 下午 09:14
  */
-@Data
+@Getter
+@Setter
 @Entity
 public class UnitOfMeasure {
 
