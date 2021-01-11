@@ -7,5 +7,5 @@ package guru.springframework.spring5recipeapp.domain;
  * @date 2020/12/8 下午 09:22
  */
 public enum Difficulty {
-    EASY, MODERATE, HARD
+    EASY, MODERATE, KIND_OF_HARD, HARD
 }
